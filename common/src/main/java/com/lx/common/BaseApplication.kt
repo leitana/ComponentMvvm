@@ -9,5 +9,5 @@ import android.app.Application
  * @author linxiao
  * @data Created in 2021/09/09
  */
-class BaseApplication: Application() {
+open class BaseApplication: Application() {
 }

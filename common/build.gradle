@@ -87,4 +87,6 @@ dependencies {
     api ThirdPart.KoinandroidScope
     api ThirdPart.KoinandroidxViewModel
     api ThirdPart.Koinfragment
+
+    api ThirdPart.permissionx
 }

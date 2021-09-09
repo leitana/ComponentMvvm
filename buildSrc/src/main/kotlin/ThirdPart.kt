@@ -97,15 +97,17 @@ object ThirdPart {
 
     //常用运行时权限请求管理库
     const val rxPermission="com.github.tbruyelle:rxpermissions:0.12"
-
     private const val PermissionDispatcherversion= "4.8.0"
     val permissionsdispatcher="com.github.permissions-dispatcher:permissionsdispatcher:$PermissionDispatcherversion"
     //use kapt，not api or implementation
     val PermissionDispatcherprocessor="com.github.permissions-dispatcher:permissionsdispatcher-processor:$PermissionDispatcherversion"
 
+    const val XXPermissions = "com.github.getActivity:XXPermissions:12.2"
+    const val permissionx = "com.guolindev.permissionx:permissionx:1.5.1"
+
     //常用的工具类
     const val utilcodex = "com.blankj:utilcodex:1.26.0"
-
+    //日志
     const val logger = "com.orhanobut:logger:2.2.0"
 
     //微信开源项目，替代SP

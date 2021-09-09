@@ -45,4 +45,10 @@ dependencies {
     androidTestImplementation(Testing.espresso)
 
     implementation(Google.material)
+
+    if (BuildConfig.isAppMode) {
+        implementation project(':common')
+    } else {
+        implementation project(':home')
+    }
 }
