@@ -1,5 +1,5 @@
 /**
- * @author haizhuo
+ * @author linxiao
  * @description 编译配置信息
  */
 object BuildConfig {

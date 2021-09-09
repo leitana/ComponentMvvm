@@ -1,6 +1,6 @@
 
 /**
- * @author haizhuo
+ * @author linxiao
  */
 object Testing {
     const val junit = "junit:junit:4.13"

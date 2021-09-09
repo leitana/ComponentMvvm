@@ -1,5 +1,5 @@
 /**
- * @author haizhuo
+ * @author linxiao
  * @introduction 协程等kotlin内部使用类
  */
 @SuppressWarnings("SpellCheckingInspection")

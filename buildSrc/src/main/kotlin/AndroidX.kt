@@ -1,5 +1,5 @@
 /**
- * @author haizhuo
+ * @author linxiao
  * ·不带 ktx 后缀的为 java 依赖，核心功能在此库
  * ·带 ktx 后缀为 kotlin 依赖，提供很多方便的扩展函数, ktx 默认引入不带 ktx 的库
  * 依赖关系可以使用：【 gradlew :app:dependencies --scan --configuration releaseRuntimeClasspath >dependenciesTree.txt 输出app模块依赖树 】

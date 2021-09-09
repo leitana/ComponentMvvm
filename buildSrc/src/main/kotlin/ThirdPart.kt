@@ -1,6 +1,6 @@
 
 /**
- * @author haizhuo
+ * @author linxiao
  * @desciption 第三方依赖包
  */
 object ThirdPart {
