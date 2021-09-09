@@ -8,7 +8,7 @@ object BuildConfig {
     const val minSdkVersion = 23
     const val targetSdkVersion = 30
 
-    const val applicationId ="com.lx.componentmvvm"
+    const val applicationId ="com.ts.g5s"
     const val testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner"
 
     var versionCode = 1

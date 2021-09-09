@@ -32,120 +32,69 @@ object AndroidX {
     const val recyclerView = "androidx.recyclerview:recyclerview:1.2.1"
     //swiperefreshlayout
     const val swiperefreshlayout = "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
-    object ViewPager {
-        //viewpager
-        const val viewpager = "androidx.viewpager:viewpager:1.0.0"
-        //viewpager2
-        const val viewpager2 = "androidx.viewpager2:viewpager2:1.0.0"
-    }
 
-    object Paging {
-        private const val paging_version = "3.0.0"
-        const val runtime = "androidx.paging:paging-runtime:$paging_version"
-        const val runtimeKtx = "androidx.paging:paging-runtime-ktx:$paging_version"
+    //viewpager
+    const val viewpager = "androidx.viewpager:viewpager:1.0.0"
+    //viewpager2
+    const val viewpager2 = "androidx.viewpager2:viewpager2:1.0.0"
 
-        // optional - RxJava2 support
-        const val rxjava2 = "androidx.paging:paging-rxjava2:$paging_version"
-        const val rxjava2Ktx = "androidx.paging:paging-rxjava2-ktx:$paging_version"
+    /**
+     * lifecycle
+     */
+    private const val lifecycle_version = "2.3.1"
+    @Deprecated("lifecycle-extensions 已弃用，没有2.3.0版本，ViewModelProviders.of()被废弃了，如果需要使用，可在活动页和碎片页使用ViewModelProvider(ViewModelStoreOwner)")
+    const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:2.1.0"
+    const val lifecycleLivedata = "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    const val lifecycleLiveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
+    const val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    const val lifecycleViewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    //Saved state module for ViewModel
+    const val lifecycleViewModelSavedState =
+        "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    //Annotation processor 注释处理器
+    //use kapt,not implementation
+    const val lifecycleCompiler ="androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    // if using Java8, use the following instead of lifecycle-compiler
+    //提供了DefaultLifecycleObserver接口
+    const val lifecycleCommonJava8 = "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    //helpers for implementing LifecycleOwner in a Service
+    const val lifecycleService = "androidx.lifecycle:lifecycle-service:$lifecycle_version"
+    //ProcessLifecycleOwner provides a lifecycle for the whole application process
+    const val lifecycleProcess ="androidx.lifecycle:lifecycle-process:$lifecycle_version"
+    const val lifecycleRuntime = "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+    const val lifecycleRuntimeKtx ="androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
 
-        // optional - RxJava3 support
-        const val rxjava3 = "androidx.paging:paging-rxjava3:$paging_version"
-
-        // optional - Guava ListenableFuture support
-        const val guava = "androidx.paging:paging-guava:$paging_version"
-
-        // alternatively - without Android dependencies for tests
-        const val testingCommon = "androidx.paging:paging-common:$paging_version"
-        const val testingCommonKtx = "androidx.paging:paging-common-ktx:$paging_version"
-
-        // optional - Jetpack Compose integration
-        const val compose = "androidx.paging:paging-compose:1.0.0-alpha10"
-    }
-
-    object Hilt{
-        private const val hilt_version = "2.3.0"
-        const val common = "androidx.hilt:hilt-common:$hilt_version"
-        const val commonKtx = "androidx.hilt:hilt-common-ktx:$hilt_version"
-    }
-
-    object Lifecycle {
-        private const val lifecycle_version = "2.3.1"
-
-        @Deprecated("lifecycle-extensions 已弃用，没有2.3.0版本，ViewModelProviders.of()被废弃了，如果需要使用，可在活动页和碎片页使用ViewModelProvider(ViewModelStoreOwner)")
-        const val extensions = "androidx.lifecycle:lifecycle-extensions:2.1.0"
-
-        const val livedata = "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
-        const val liveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
-
-        const val viewModel = "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
-        const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
-
-        //Saved state module for ViewModel
-        const val viewModelSavedState =
-            "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
-
-        //Annotation processor 注释处理器
-        //use kapt,not implementation
-        const val compiler ="androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
-
-        // if using Java8, use the following instead of lifecycle-compiler
-        //提供了DefaultLifecycleObserver接口
-        const val commonJava8 = "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
-
-        //helpers for implementing LifecycleOwner in a Service
-        const val service = "androidx.lifecycle:lifecycle-service:$lifecycle_version"
-
-        //ProcessLifecycleOwner provides a lifecycle for the whole application process
-        const val process ="androidx.lifecycle:lifecycle-process:$lifecycle_version"
-
-        const val runtime = "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
-        const val runtimeKtx ="androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
-    }
-
+    /**
+     * Navigation
+     */
     const val navigation_version = "2.3.5"
-    object Navigation {
-
-        //const val fragment = "androidx.navigation:navigation-fragment:$navigation_version"
-        const val fragmentKtx = "androidx.navigation:navigation-fragment-ktx:$navigation_version"
-
-        //const val ui = "androidx.navigation:navigation-ui:$navigation_version"
-        const val uiKtx = "androidx.navigation:navigation-ui-ktx:$navigation_version"
-
-        const val safeArgs = "androidx.navigation:navigation-safe-args-generator:$navigation_version"
-
-        // Dynamic Feature Module Support
-        const val dynamic =
-            "androidx.navigation:navigation-dynamic-features-fragment:$navigation_version"
-
-        // Testing Navigation
-        const val testing = "androidx.navigation:navigation-testing:$navigation_version"
-
-        //Jetpack Compose Integration
-        const val compose ="androidx.navigation:navigation-compose:2.4.0-alpha04"
-    }
+    //const val fragment = "androidx.navigation:navigation-fragment:$navigation_version"
+    const val NavigationFragmentKtx = "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    //const val ui = "androidx.navigation:navigation-ui:$navigation_version"
+    const val NavigationUiKtx = "androidx.navigation:navigation-ui-ktx:$navigation_version"
+    const val NavigationSafeArgs = "androidx.navigation:navigation-safe-args-generator:$navigation_version"
+    // Dynamic Feature Module Support
+    const val NavigationDynamic =
+        "androidx.navigation:navigation-dynamic-features-fragment:$navigation_version"
+    // Testing Navigation
+    const val NavigationTesting = "androidx.navigation:navigation-testing:$navigation_version"
+    //Jetpack Compose Integration
+    const val NavigationCompose ="androidx.navigation:navigation-compose:2.4.0-alpha04"
 
 
-    object Room {
-        private const val room_version = "2.3.0"
-
-        const val runtime = "androidx.room:room-runtime:$room_version"
-
-        // for java use annotationProcessor , for kotlin use kapt
-        const val compiler = "androidx.room:room-compiler:$room_version"
-
-        // optional - Kotlin Extensions and Coroutines support for Room
-        const val ktx = "androidx.room:room-ktx:$room_version"
-
-        // optional - RxJava support for Room
-        const val rxjava2 = "androidx.room:room-rxjava2:$room_version"
-        const val rxjava3 = "androidx.room:room-rxjava3:$room_version"
-
-        // optional - Guava support for Room, including Optional and ListenableFuture
-        const val guava = "androidx.room:room-guava:$room_version"
-
-        //Testing Room
-        const val testing = "androidx.room:room-testing:$room_version"
-    }
+    private const val room_version = "2.3.0"
+    const val RoomRuntime = "androidx.room:room-runtime:$room_version"
+    // for java use annotationProcessor , for kotlin use kapt
+    const val RoomCompiler = "androidx.room:room-compiler:$room_version"
+    // optional - Kotlin Extensions and Coroutines support for Room
+    const val RoomKtx = "androidx.room:room-ktx:$room_version"
+    // optional - RxJava support for Room
+    const val RoomRxjava2 = "androidx.room:room-rxjava2:$room_version"
+    const val RoomRxjava3 = "androidx.room:room-rxjava3:$room_version"
+    // optional - Guava support for Room, including Optional and ListenableFuture
+    const val RoomGuava = "androidx.room:room-guava:$room_version"
+    //Testing Room
+    const val RoomTesting = "androidx.room:room-testing:$room_version"
 
 
     //com.android.support:support-v4的androidx映射版本，关于其他支持库查看{https://developer.android.com/topic/libraries/support-library/packages}

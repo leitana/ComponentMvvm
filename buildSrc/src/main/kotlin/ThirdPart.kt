@@ -1,4 +1,3 @@
-
 /**
  * @author linxiao
  * @desciption 第三方依赖包
@@ -6,25 +5,20 @@
 object ThirdPart {
     /*******************************网络请求S***********************************/
     //网路请求库retrofit
-    object Retrofit {
-        private const val retrofit_version = "2.9.0"
-        const val retrofit = "com.squareup.retrofit2:retrofit:$retrofit_version"
-
-        //gson转换器
-        const val convertGson = "com.squareup.retrofit2:converter-gson:$retrofit_version"
-
-        //scalars转换器
-        const val convertScalars = "com.squareup.retrofit2:converter-scalars:2.9.0"
-        const val adapterRxjava = "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
-    }
+    private const val retrofit_version = "2.9.0"
+    const val retrofit = "com.squareup.retrofit2:retrofit:$retrofit_version"
+    //gson转换器
+    const val convertGson = "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    const val converterMoshi = "com.squareup.retrofit2:converter-moshi:2.9.0"
+    //scalars转换器
+    const val convertScalars = "com.squareup.retrofit2:converter-scalars:2.9.0"
+    const val adapterRxjava = "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
 
     //okhttp
-    object OkHttp {
-        private const val okhttp_version = "4.8.0"
-        const val okhttp = "com.squareup.okhttp3:okhttp:$okhttp_version"
-        const val urlConnection = "com.squareup.okhttp3:okhttp-urlconnection:$okhttp_version"
-        const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
-    }
+    private const val okhttp_version = "4.9.1"
+    const val okhttp = "com.squareup.okhttp3:okhttp:$okhttp_version"
+    const val urlConnection = "com.squareup.okhttp3:okhttp-urlconnection:$okhttp_version"
+    const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
 
     //用于持久化cookie
     //const val persistentCookieJar = "com.github.franmontiel:PersistentCookieJar:v1.0.1"
@@ -39,29 +33,25 @@ object ThirdPart {
 
     /*******************************图片S***********************************/
     //图片加载框架
-    object Glide {
-        private const val glide_version = "4.11.0"
-        const val glide = "com.github.bumptech.glide:glide:$glide_version"
-        const val compiler = "com.github.bumptech.glide:compiler:$glide_version"
-    }
+    private const val glide_version = "4.11.0"
+    const val glide = "com.github.bumptech.glide:glide:$glide_version"
+    const val compiler = "com.github.bumptech.glide:compiler:$glide_version"
     /*******************************图片E***********************************/
 
     /*******************************窗口、控件和相关工具***********************************/
     //顶部SnackBar
-    const val topSnackBar = "com.github.PengHaiZhuo:TSnackBar:1.1.1"
+//    const val topSnackBar = "com.github.PengHaiZhuo:TSnackBar:1.1.1"
 
     //插入即用的dialog
     //项目地址：https://github.com/afollestad/material-dialogs
-    object MaterialDialogs {
-        private const val version = "3.3.0"
-        const val core = "com.afollestad.material-dialogs:core:$version"
-        const val input = "com.afollestad.material-dialogs:input:$version"
-        const val color = "com.afollestad.material-dialogs:color:$version"
-        const val files = "com.afollestad.material-dialogs:files:$version"
-        const val datetime = "com.afollestad.material-dialogs:datetime:$version"
-        const val bottomsheets = "com.afollestad.material-dialogs:bottomsheets:$version"
-        const val lifecycle = "com.afollestad.material-dialogs:lifecycle:$version"
-    }
+    private const val MaterialDialogsversion = "3.3.0"
+    const val MaterialDialogscore = "com.afollestad.material-dialogs:core:$MaterialDialogsversion"
+    const val MaterialDialoginput = "com.afollestad.material-dialogs:input:$MaterialDialogsversion"
+    const val MaterialDialogcolor = "com.afollestad.material-dialogs:color:$MaterialDialogsversion"
+    const val MaterialDialogfiles = "com.afollestad.material-dialogs:files:$MaterialDialogsversion"
+    const val MaterialDialogdatetime = "com.afollestad.material-dialogs:datetime:$MaterialDialogsversion"
+    const val MaterialDialogbottomsheets = "com.afollestad.material-dialogs:bottomsheets:$MaterialDialogsversion"
+    const val MaterialDialoglifecycle = "com.afollestad.material-dialogs:lifecycle:$MaterialDialogsversion"
 
     //轮播图
     const val bannerVp = "com.github.zhpanvip:BannerViewPager:3.1.5"
@@ -76,6 +66,8 @@ object ThirdPart {
 
     //RecycleView适配器工具
     const val baseRecycleViewHelper = "com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4"
+    //官方下拉刷新
+    const val swiperefreshlayout = "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
     //带侧滑菜单的列表
     const val xRecycleView = "com.yanzhenjie.recyclerview:x:1.3.2"
@@ -94,38 +86,27 @@ object ThirdPart {
     /*******************************窗口、控件和相关工具***********************************/
 
     /*******************************依赖注入***********************************/
-    object DI {
-        object Koin {
-            private const val koin_version = "2.1.5"
+    private const val koin_version = "2.2.2"
+    val Koincore = "org.koin:koin-core:$koin_version}"
+    val Koinandroid = "org.koin:koin-android:$koin_version"
+    val KoinandroidxViewModel = "org.koin:koin-androidx-viewmodel:$koin_version"
+    val KoinandroidScope = "org.koin:koin-android-scope:$$koin_version"
+    val Koinfragment = "org.koin:koin-androidx-fragment:$koin_version"
 
-            val core = "org.koin:koin-core:$koin_version}"
-            val android = "org.koin:koin-android:$koin_version"
-            val androidxViewModel = "org.koin:koin-androidx-viewmodel:$koin_version"
-            val androidScope = "org.koin:koin-android-scope:$$koin_version"
-        }
-
-        object Dagger{
-            //tip:可搭配Hilt使用
-            private const val dagger_version = "2.37"
-            val dagger ="com.google.dagger:dagger:$dagger_version"
-            //use annotationProcessor ,not implementation
-            val compiler ="com.google.dagger:dagger-compiler::$dagger_version"
-        }
-    }
     /*******************************依赖注入***********************************/
 
     //常用运行时权限请求管理库
     const val rxPermission="com.github.tbruyelle:rxpermissions:0.12"
 
-    object PermissionDispatcher{
-        private const val version= "4.8.0"
-        val permissionsdispatcher="com.github.permissions-dispatcher:permissionsdispatcher:$version"
-        //use kapt，not api or implementation
-        val processor="com.github.permissions-dispatcher:permissionsdispatcher-processor:$version"
-    }
+    private const val PermissionDispatcherversion= "4.8.0"
+    val permissionsdispatcher="com.github.permissions-dispatcher:permissionsdispatcher:$PermissionDispatcherversion"
+    //use kapt，not api or implementation
+    val PermissionDispatcherprocessor="com.github.permissions-dispatcher:permissionsdispatcher-processor:$PermissionDispatcherversion"
 
     //常用的工具类
     const val utilcodex = "com.blankj:utilcodex:1.26.0"
+
+    const val logger = "com.orhanobut:logger:2.2.0"
 
     //微信开源项目，替代SP
     const val mmkv = "com.tencent:mmkv:1.0.22"

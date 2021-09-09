@@ -36,14 +36,55 @@ android {
 
 dependencies {
 
-    implementation(Kotlin.stdlib)
-    implementation(AndroidX.coreKtx)
-    implementation(AndroidX.appcompat)
-    implementation(AndroidX.constraintlayout)
+    implementation Kotlin.stdlib
+    implementation AndroidX.coreKtx
+    implementation AndroidX.appcompat
+    implementation AndroidX.constraintlayout
 
-    testImplementation(Testing.junit)
-    androidTestImplementation(Testing.androidJunit)
-    androidTestImplementation(Testing.espresso)
+    testImplementation Testing.junit
+    androidTestImplementation Testing.androidJunit
+    androidTestImplementation Testing.espresso
 
-    implementation(Google.material)
+    implementation Google.material
+
+    api ThirdPart.utilcodex
+
+    api ThirdPart.MaterialDialogscore
+    api ThirdPart.MaterialDialoginput
+    api ThirdPart.MaterialDialogbottomsheets
+    api ThirdPart.MaterialDialoglifecycle
+
+    //viewmodel livedata coroutines
+    api AndroidX.lifecycleViewModelKtx
+    api AndroidX.lifecycleRuntimeKtx
+    api AndroidX.lifecycleLiveDataKtx
+
+    api Kotlin.Coroutinesandroid
+
+    //retrofit okhttp
+    api ThirdPart.retrofit
+    api ThirdPart.convertGson
+    api ThirdPart.converterMoshi
+    api ThirdPart.okhttp
+    api ThirdPart.loggingInterceptor
+    //cookie持久化包
+//    api 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+
+    //recyclerview adapter
+    api ThirdPart.baseRecycleViewHelper
+    //刷新
+    api ThirdPart.swiperefreshlayout
+
+    //glide
+    api ThirdPart.glide
+    annotationProcessor ThirdPart.compiler
+
+    //日志
+    api ThirdPart.logger
+
+//    def koin_version = "2.2.2"
+    api ThirdPart.Koinandroid
+    api ThirdPart.KoinandroidScope
+    api ThirdPart.KoinandroidxViewModel
+    api ThirdPart.Koinfragment
 }

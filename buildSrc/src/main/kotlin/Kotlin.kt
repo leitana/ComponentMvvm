@@ -12,9 +12,7 @@ object Kotlin {
     val plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${BuildConfig.kotlin_version}"
 
     //协程
-    object Coroutines{
-        private const val version = "1.4.3"
-        const val core ="org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
-        const val android ="org.jetbrains.kotlinx:kotlinx-coroutines-android:$version"
-    }
+    private const val Coroutinesversion = "1.4.3"
+    const val Coroutinescore ="org.jetbrains.kotlinx:kotlinx-coroutines-core:$Coroutinesversion"
+    const val Coroutinesandroid ="org.jetbrains.kotlinx:kotlinx-coroutines-android:$Coroutinesversion"
 }
