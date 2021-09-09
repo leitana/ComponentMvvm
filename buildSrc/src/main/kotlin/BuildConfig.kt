@@ -16,4 +16,6 @@ object BuildConfig {
 
     var gradle_version = "4.2.2"
     var kotlin_version = "1.5.21"
+
+    const val isAppMode = false
 }

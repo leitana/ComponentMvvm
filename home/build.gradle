@@ -1,7 +1,10 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
+if (BuildConfig.isAppMode) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
 }
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion(BuildConfig.compileSdkVersion)
@@ -39,10 +42,10 @@ dependencies {
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appcompat)
     implementation(AndroidX.constraintlayout)
-
     testImplementation(Testing.junit)
     androidTestImplementation(Testing.androidJunit)
     androidTestImplementation(Testing.espresso)
-
     implementation(Google.material)
+
+    implementation project(':common')
 }
