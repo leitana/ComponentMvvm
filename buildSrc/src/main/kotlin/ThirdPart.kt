@@ -125,4 +125,7 @@ object ThirdPart {
 
     //腾讯bug上报收集
     const val bugly ="com.tencent.bugly:crashreport_upgrade:latest.release"
+
+    //加载动画
+    const val SpinKit = "com.github.ybq:Android-SpinKit:1.4.0"
 }

@@ -11,7 +11,7 @@ android {
     buildToolsVersion = BuildConfig.buildToolsVersion
 
     defaultConfig {
-        applicationId = BuildConfig.applicationId
+//        applicationId = BuildConfig.applicationId
         minSdkVersion(BuildConfig.minSdkVersion)
         targetSdkVersion(BuildConfig.targetSdkVersion)
         versionCode = BuildConfig.versionCode
@@ -63,5 +63,5 @@ dependencies {
     androidTestImplementation(Testing.espresso)
     implementation(Google.material)
 
-    implementation project(':common')
+    api project(':common')
 }
